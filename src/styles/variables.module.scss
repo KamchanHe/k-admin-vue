@@ -1,0 +1,21 @@
+@import './variables.scss';
+:export {
+  theme: $--el-color-primary;
+  menu-text: $menu-text;
+  menu-active-text: $menu-active-text;
+  submenu-active-text: $submenu-active-text;
+  menu-bg: $menu-bg;
+  menu-hover: $menu-hover;
+  submenu-bg: $submenu-bg;
+  submenu-hover: $submenu-hover;
+  sidebar-bg: $sidebar-bg;
+  sidebar-width: $sidebar-width;
+  mn-menu-text: $mn-menu-text;
+  mn-menu-active-text: $mn-menu-active-text;
+  mn-submenu-active-text: $mn-submenu-active-text;
+  mn-menu-bg: $mn-menu-bg;
+  mn-menu-hover: $mn-menu-hover;
+  mn-submenu-bg: $mn-submenu-bg;
+  mn-submenu-hover: $mn-submenu-hover;
+  mn-sidebar-bg: $mn-sidebar-bg;
+}
