@@ -5,7 +5,7 @@ module.exports = {
     'browser': true,
     'node': true,
     'es2021': true,
-    'vue/setup-compiler-macros': true // for vue3
+    'vue/setup-compiler-macros': true // deal with defineProp is not defined
   },
   extends: [
     'eslint:recommended', // eslint recommended
@@ -30,9 +30,14 @@ module.exports = {
   plugins: [
     'vue', // vue
     '@typescript-eslint', // ts
+    'import', // import
+    'promise', // promise
     'prettier' // prettier
   ],
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
+    },
     'import/resolver': {
       typescript: {
         project: path.resolve(__dirname, './tsconfig.json'),
@@ -46,11 +51,12 @@ module.exports = {
   rules: {
     // prettier
     'prettier/prettier': ['error'],
+    // eslint
     'quotes': ['error', 'single'],
     'semi': ['error', 'always'],
     // vue
     'vue/multi-word-component-names': 'off',
     // import
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }]
   }
 };
