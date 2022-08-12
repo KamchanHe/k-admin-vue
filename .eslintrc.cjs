@@ -11,6 +11,7 @@ module.exports = {
     'eslint:recommended', // eslint recommended
     'plugin:vue/vue3-recommended', // vue3 recommended || essential
     'airbnb-base', // airbnb || standard
+    'airbnb-typescript/base', // ts airbnb
     'plugin:@typescript-eslint/recommended', // ts recommended
     'plugin:import/recommended', // import recommended
     'plugin:import/typescript', // ts import
@@ -25,7 +26,9 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true
-    }
+    },
+    extraFileExtensions: ['.vue'],
+    project: ['./tsconfig.json'] // for airbnb-typescript
   },
   plugins: [
     'vue', // vue
@@ -35,28 +38,38 @@ module.exports = {
     'prettier' // prettier
   ],
   settings: {
+    // for why import/no-unresolved disabled
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx']
     },
+    // for why import/no-unresolved disabled
     'import/resolver': {
-      typescript: {
-        project: path.resolve(__dirname, './tsconfig.json'),
-        alwaysTryTypes: true
-      },
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
-      }
+      typescript: true
     }
   },
   rules: {
     // prettier
     'prettier/prettier': ['error'],
-    // eslint
-    'quotes': ['error', 'single'],
-    'semi': ['error', 'always'],
     // vue
     'vue/multi-word-component-names': 'off',
     // import
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }]
+    // for why import/no-unresolved disabled
+    'import/no-unresolved': 'error',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    // import to fix ESLint: Missing file extension "ts" for "@/utils"(import/extensions)
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
+      }
+    ],
+    // eslint
+    'quotes': ['error', 'single'], // single quotes
+    'semi': ['error', 'always'], // always semi;
+    'no-param-reassign': 'off' // off disabled edit function params
   }
 };

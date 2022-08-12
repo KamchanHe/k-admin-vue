@@ -12,15 +12,13 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": [
-      "vite-plugin-svg-icons/client"
-    ]
+    "types": ["vite-plugin-svg-icons/client"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules","dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
