@@ -1,4 +1,3 @@
-const path = require('path');
 module.exports = {
   root: true,
   env: {
@@ -9,9 +8,9 @@ module.exports = {
   },
   extends: [
     'eslint:recommended', // eslint recommended
-    'plugin:vue/vue3-recommended', // vue3 recommended || essential
     'airbnb-base', // airbnb || standard
     'airbnb-typescript/base', // ts airbnb
+    'plugin:vue/vue3-recommended', // vue3 recommended || essential
     'plugin:@typescript-eslint/recommended', // ts recommended
     'plugin:import/recommended', // import recommended
     'plugin:import/typescript', // ts import
@@ -44,7 +43,7 @@ module.exports = {
     },
     // for why import/no-unresolved disabled
     'import/resolver': {
-      typescript: true
+      typescript: {},
     }
   },
   rules: {
@@ -53,10 +52,9 @@ module.exports = {
     // vue
     'vue/multi-word-component-names': 'off',
     // import
-    // for why import/no-unresolved disabled
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    // import to fix ESLint: Missing file extension "ts" for "@/utils"(import/extensions)
+    // to fix airbnb eslint: Missing file extension "ts" for (import/extensions)
     'import/extensions': [
       'error',
       'ignorePackages',
