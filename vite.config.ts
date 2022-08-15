@@ -18,9 +18,14 @@ export default defineConfig({
     vue(),
     viteEslint(),
     AutoImport({
+      dts: 'src/auto-imports.d.ts',
       resolvers: [ElementPlusResolver()]
     }),
-    Components({ resolvers: [ElementPlusResolver()] }),
+    Components({
+      dts: 'src/components.d.ts',
+      dirs: [],
+      resolvers: [ElementPlusResolver()]
+    }),
     vueJsx(),
     legacy({
       targets: ['ie >= 11'],
@@ -33,7 +38,8 @@ export default defineConfig({
       symbolId: 'icon-[dir]-[name]'
     }),
     viteMockServe({
-      mockPath: '/mock',
+      mockPath: 'mock',
+      supportTs: true,
       localEnabled: true
     }),
     visualizer({ open: true })
@@ -46,7 +52,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "@/styles/variables.scss";'
+        additionalData: '@import "@/style/variables.scss";'
       }
     }
   }

@@ -1,10 +1,16 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import router from '@/router';
 import App from './App.vue';
 
 import 'normalize.css/normalize.css';
-import '@/styles/index.scss';
+import '@/style/index.scss';
 
 // eslint-disable-next-line import/no-unresolved
 import 'virtual:svg-icons-register';
 
-createApp(App).mount('#app');
+const app = createApp(App);
+const pinia = createPinia();
+app.use(pinia);
+app.use(router);
+app.mount('#app');

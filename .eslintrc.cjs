@@ -43,7 +43,7 @@ module.exports = {
     },
     // for why import/no-unresolved disabled
     'import/resolver': {
-      typescript: {},
+      typescript: {}
     }
   },
   rules: {
@@ -68,6 +68,9 @@ module.exports = {
     // eslint
     'quotes': ['error', 'single'], // single quotes
     'semi': ['error', 'always'], // always semi;
-    'no-param-reassign': 'off' // off disabled edit function params
+    'no-param-reassign': 'off', // off disabled edit function params
+    // ts
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
   }
 };
