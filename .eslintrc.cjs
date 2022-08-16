@@ -70,7 +70,8 @@ module.exports = {
     'semi': ['error', 'always'], // always semi;
     'no-param-reassign': 'off', // off disabled edit function params
     // ts
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error"],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/no-empty-interface': 'off'
   }
 };
