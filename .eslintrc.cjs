@@ -54,6 +54,7 @@ module.exports = {
     // import
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-cycle': 'off',
     // to fix airbnb eslint: Missing file extension "ts" for (import/extensions)
     'import/extensions': [
       'error',
