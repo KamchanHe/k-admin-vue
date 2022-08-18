@@ -4,6 +4,8 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
@@ -23,8 +25,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "mock/**/*.ts",
+    "vite.config.ts",
     "public/window-config.ts"
   ],
-  "exclude": ["node_modules", "dist"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": ["node_modules", "dist"]
 }
