@@ -1,6 +1,6 @@
-@import './variables.scss';
+@use './variables.scss' as *;
 :export {
-  theme: $--el-color-primary;
+  theme: $color-primary;
   menu-text: $menu-text;
   menu-active-text: $menu-active-text;
   submenu-active-text: $submenu-active-text;

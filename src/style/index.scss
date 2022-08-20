@@ -1,4 +1,4 @@
-@import './transition.scss';
+@use './transition.scss' as *;
 
 body,
 html {
