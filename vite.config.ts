@@ -24,7 +24,11 @@ export default defineConfig({
     Components({
       dts: 'src/components.d.ts',
       dirs: [],
-      resolvers: [ElementPlusResolver()]
+      resolvers: [
+        ElementPlusResolver({
+          importStyle: 'sass'
+        })
+      ]
     }),
     vueJsx(),
     legacy({
@@ -52,7 +56,10 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@use "@/style/variables.scss" as *;'
+        additionalData: `
+          @use "@/style/variables.scss" as *;
+          @use "@/style/element-plus.scss" as *;
+        `
       }
     }
   }

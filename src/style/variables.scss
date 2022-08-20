@@ -1,22 +1,22 @@
-$color-primary: var(--el-color-primary);
-$color-danger: #ff4949;
-$color-warning: #ffba00;
-$color-success: #13ce66;
-$color-info: #1e1e1e;
+$el-color-primary: var(--el-color-primary);
+$el-color-danger: #ff4949;
+$el-color-warning: #ffba00;
+$el-color-success: #13ce66;
+$el-color-info: #1e1e1e;
 
 // sidebar
 $menu-text: #fff;
-$menu-active-text: $color-primary;
-$submenu-active-text: $color-primary;
+$menu-active-text: $el-color-primary;
+$submenu-active-text: $el-color-primary;
 
 $menu-bg: #304156;
 $menu-hover: #263445;
 $menu-active-bg: #263445;
-$menu-active-line-bg: $color-primary;
+$menu-active-line-bg: $el-color-primary;
 $submenu-bg: #1f2d3d;
 $submenu-hover: #001528;
 $submenu-active-bg: #001528;
-$submenu-active-line-bg: $color-primary;
+$submenu-active-line-bg: $el-color-primary;
 $sidebar-bg: #2b2f3a;
 $sidebar-width: 210px;
 
@@ -25,15 +25,15 @@ $logo-text: #fff;
 
 // module-navigation
 $mn-menu-text: #333;
-$mn-menu-active-text: $color-primary;
-$mn-submenu-active-text: $color-primary;
+$mn-menu-active-text: $el-color-primary;
+$mn-submenu-active-text: $el-color-primary;
 
 $mn-menu-bg: #fff;
 $mn-menu-hover: #ebf3fe;
 $mn-menu-active-bg: #ebf3fe;
-$mn-menu-active-line-bg: $color-primary;
+$mn-menu-active-line-bg: $el-color-primary;
 $mn-submenu-bg: #fff;
 $mn-submenu-hover: #ebf3fe;
 $mn-submenu-active-bg: #ebf3fe;
-$mn-submenu-active-line-bg: $color-primary;
-$mn-sidebar-bg: $color-primary;
+$mn-submenu-active-line-bg: $el-color-primary;
+$mn-sidebar-bg: $el-color-primary;
